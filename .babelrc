@@ -1,0 +1,25 @@
+{
+    //这是一个自动加载的文件 rc结尾的，类似在linux中的rc文件一样
+    "plugins": [
+        //解决promise打包之后的环境污染 识别最新语法
+        "transform-runtime",
+        [
+            "component",
+            {
+                "libraryName": "element-ui",
+                "styleLibraryName": "theme-chalk"
+            }
+        ]
+    ],
+    "presets": [
+        [
+            "env",{
+                "target":{
+                    //支持浏览器的版本 支持ES5环境的
+                    "browsers":["last 2 versions"]        
+                },
+                "debug":true
+            }
+        ]
+    ]
+}
